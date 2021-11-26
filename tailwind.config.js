@@ -1,5 +1,12 @@
 module.exports = {
-  purge: ['./src/**/*.jsx', './index.html'],
+  purge: {
+    enabled: true, // This would mean that 'purge' always runs (even when you run a build in development). Could also be set to 'false' (to never run) or, apparently, anything else...
+    content: ['./src/**/*.jsx', './index.html'],
+    options: {
+      // See 'https://purgecss.com/configuration.html#options' for what could go here
+      // For example 'safelist', to which you would add the classes that you never want to purge, even if they can't be found
+    },
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -11,7 +18,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        headline: 'Poppins, sans-serif', // This will create a 'font-headline' class that uses the 'Poppins' font
+        headline: 'Poppins, sans-serif',
       },
     },
   },
@@ -22,7 +29,3 @@ module.exports = {
   },
   plugins: [],
 };
-
-// 'purge' is not smart; it scans the specified files and looks speficially for any text strings that match tailwind class names
-// Even having a string that is not a css class, for example '<p>h-32 w-32</p>', will be enough to have the 'h-32' and 'w-32' classes included in the build css file
-// HOWEVER, because it no longer finds 'h-32' and 'w-32' in 'DestinationCard.jsx' (because it's been updated to 'h-${size}' and 'w-${size}', it will NOT include the 'h-32' and 'w-32' classes in the final build)
