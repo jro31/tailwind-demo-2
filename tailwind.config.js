@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [],
+  purge: ['./src/**/*.jsx', './index.html'], // The '**' means to look in any sub directory, then the '*' means any '.jsx' file
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
