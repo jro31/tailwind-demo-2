@@ -4,9 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: '#0fa9e6',
-        'brand-light': '#3fbaeb',
-        'brand-dark': '#0c87b8',
+        brand: {
+          light: '#3fbaeb', // This will create a 'brand-light' color
+          DEFAULT: '#0fa9e6', // This (must be the word DEFAULT - all uppercase) will create the 'brand' color
+          dark: '#0c87b8', // This will create a 'brand-dark' color
+        },
       },
     },
   },
@@ -17,5 +19,3 @@ module.exports = {
   },
   plugins: [],
 };
-
-// By default, 'theme' will inherit the default tailwind theme
