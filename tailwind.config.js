@@ -5,10 +5,13 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          light: '#3fbaeb', // This will create a 'brand-light' color
-          DEFAULT: '#0fa9e6', // This (must be the word DEFAULT - all uppercase) will create the 'brand' color
-          dark: '#0c87b8', // This will create a 'brand-dark' color
+          light: '#3fbaeb',
+          DEFAULT: '#0fa9e6',
+          dark: '#0c87b8',
         },
+      },
+      fontFamily: {
+        headline: 'Poppins, sans-serif', // This will create a 'font-headline' class that uses the 'Poppins' font
       },
     },
   },
