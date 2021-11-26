@@ -26,7 +26,7 @@ export default function App() {
             </p>
             <div className='mt-4 space-x-1 sm:mt-6'>
               <a
-                className='inline-block px-5 py-3 rounded-lg transform transition bg-brand hover:bg-indigo-400 hover:-translate-y-0.5 focus:ring-brand focus:ring-opacity-50 focus:outline-none focus:ring focus:ring-offset-2 active:bg-indigo-600 uppercase tracking-wider font-semibold text-sm text-white shadow-lg sm:text-base'
+                className='inline-block px-5 py-3 rounded-lg transform transition bg-brand hover:bg-brand-light hover:-translate-y-0.5 focus:ring-brand focus:ring-opacity-50 focus:outline-none focus:ring focus:ring-offset-2 active:bg-brand-dark uppercase tracking-wider font-semibold text-sm text-white shadow-lg sm:text-base'
                 href='#'
               >
                 Book your escape
